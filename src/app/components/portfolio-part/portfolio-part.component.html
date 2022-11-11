@@ -1,0 +1,27 @@
+<section>
+    <div class="portfolio-flex">
+        <div class="column">
+            <p class="title">{{title}}</p>
+            <p class="empty-hide"></p>
+            <ng-container *ngFor="let index of range(0)">
+                <img [src]="pics[index]" loading="lazy" alt="" srcset="">
+                <p class="empty"></p>
+            </ng-container>
+
+        </div>
+        <div class="column-mid">
+            <ng-container *ngFor="let index of range(separate)">
+                <img [src]="pics[index]" loading="lazy" alt="" srcset="">
+                <p class="empty"></p>
+            </ng-container>
+        </div>
+        <div class="column">
+            <p class="empty-hide"></p>
+            <p class="empty-hide"></p>
+            <ng-container *ngFor="let index of range(separate*2)">
+                <img [src]="pics[index]" loading="lazy" alt="" srcset="">
+                <p class="empty"></p>
+            </ng-container>
+        </div>
+    </div>
+</section>

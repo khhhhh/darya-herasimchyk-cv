@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Celaraz';
+    src: local('Celaraz ExtraBold'), local('Celaraz-ExtraBold'),
+        url('Celaraz-ExtraBold.woff2') format('woff2'),
+        url('Celaraz-ExtraBold.woff') format('woff'),
+        url('Celaraz-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }

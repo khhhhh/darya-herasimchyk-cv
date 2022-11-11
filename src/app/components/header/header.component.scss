@@ -1,0 +1,95 @@
+@import "../../../styles.scss";
+
+.header {
+  position: relative;
+}
+
+.main-title {
+  position: relative;
+  font-size: 6rem;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid $color-primary;
+  border-radius: 0 57px 0 57px;
+
+  font-family: 'Celaraz';
+  line-height: 1;
+  text-align: center;
+  color: $color-primary;
+
+  @include md {
+    font-size: 4rem;
+    border-width: 3px;
+    border-radius: 0 60px 0 60px;
+  }
+
+  @include sm {
+    font-size: 2.5rem;
+    border-width: 2px;
+    border-radius: 0 40px 0 40px;
+  }
+
+  .sun {
+    position: absolute;
+    $width: 200px;
+    width: $width;
+    left: 5%;
+    top: 5%;
+    fill: $color-primary;
+    transform: translateY(calc($width / -3));
+
+    translate: all 200ms ease-in-out;
+
+    @include md {
+      $width: 150px;
+      width: $width;
+      transform: translateY(calc($width / -3));
+    }
+
+    @include sm {
+      $width: 100px;
+      width: $width;
+      left: 2%;
+      transform: translateY(calc($width / -2));
+    }
+  }
+
+}
+
+.diamond {
+  $height: 200px;
+  height: $height;
+  width: $height * 1.5;
+  position: absolute;
+  fill: $color-primary;
+  right: 5%;
+  bottom: 0;
+  width: 15%;
+  transform: translateY(calc($height / 2 + 1px)) rotate(180deg) scaleX(-1);
+}
+
+.lang-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 15px;
+  margin: 15px 0;
+
+  color: $color-primary;
+
+
+  .separator {
+    margin: 0 8px;
+    width: 1px;
+    background-color: $color-primary;
+    display: block;
+    min-height: 50%;
+  }
+
+  a {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,204 @@
+/* You can add global styles to this file, and also import other style files */
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/*********************************/
+
+@font-face {
+    font-family: 'Celaraz';
+    src: local('Celaraz ExtraBold'), local('Celaraz-ExtraBold'),
+        url('assets/fonts/Celaraz-ExtraBold/Celaraz-ExtraBold.woff2') format('woff2'),
+        url('assets/fonts/Celaraz-ExtraBold/Celaraz-ExtraBold.woff') format('woff'),
+        url('assets/fonts/Celaraz-ExtraBold/Celaraz-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik-Bold';
+    src: url('assets/fonts/Aeonik/AeonikProTRIAL-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('assets/fonts/Aeonik/AeonikProTRIAL-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Aeonik-light';
+    src: url('assets/fonts/Aeonik/AeonikProTRIAL-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// variables //
+$color-primary: #000;
+$color-bg: #FFF;
+
+// Small tablets (portrait view)
+$screen-xsm-min: 399.98px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 575.98px;
+
+// Small tablets (portrait view)
+$screen-md-min: 767.98px;
+
+// Tablets and small desktops
+$screen-lg-min: 991.98px;
+
+// Large tablets and desktops
+$screen-xl-min: 1199.98px;
+
+@mixin sm {
+   @media (max-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin xsm {
+   @media (max-width: #{$screen-xsm-min}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin md {
+   @media (max-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (max-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (max-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 84%;
+}
+
+body {
+    background-image: url('assets/images/bg.png');
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+    z-index: -2;
+
+    font-family: 'Aeonik-Light';
+
+    &::-webkit-scrollbar{
+    }
+
+    &::before {
+        content: "";
+        position: fixed;
+        height: 110%;
+        top: -10%;
+        width: 100%;
+        z-index: -1;
+        // background: radial-gradient(#ffffffff, #ff0000aa);
+        background-color: rgba($color: $color-bg, $alpha: 0.35);
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../../styles.scss';
+
+#header-menu {
+    top: -1px;
+    z-index: 100;
+    position: sticky;
+
+    padding: 1em 0;
+    margin: 1em 0;
+
+    transition: padding 200ms ease-in-out,
+        background-color 200ms ease-in-out;
+
+    .header-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 16px;
+            margin: 0 15px;
+
+            fill: $color-primary;
+
+            @include sm {
+                margin: 0 8px;
+            }
+
+            @include xsm {
+                margin: 0 10px;
+            }
+        }
+
+        .link {
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+
+            color: $color-primary;
+
+            @include xsm {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+
+}
