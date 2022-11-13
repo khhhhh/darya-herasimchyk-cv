@@ -180,16 +180,13 @@ html {
 }
 
 body {
-    background-image: url('assets/images/bg.png');
+    background-image: url('assets/images/bg.jpg');
     background-repeat: repeat-y;
     background-position: center top;
     background-size: 100% auto;
     z-index: -2;
 
     font-family: 'Aeonik-Light';
-
-    &::-webkit-scrollbar{
-    }
 
     &::before {
         content: "";

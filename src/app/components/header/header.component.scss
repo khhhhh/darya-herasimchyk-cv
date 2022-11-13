@@ -6,8 +6,8 @@
 
 .main-title {
   position: relative;
+  height: 85vh;
   font-size: 6rem;
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +76,10 @@
   justify-content: flex-end;
   padding-right: 15px;
   margin: 15px 0;
+
+  @include md {
+    margin: 6px;
+  }
 
   color: $color-primary;
 

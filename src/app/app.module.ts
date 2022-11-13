@@ -11,6 +11,8 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { PortfolioPartComponent } from './components/portfolio-part/portfolio-part.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PortfolioTwoColumnsComponent } from './components/portfolio-two-columns/portfolio-two-columns.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +25,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     MenuComponent,
     FirstSecComponent,
     PortfolioPartComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    PortfolioTwoColumnsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

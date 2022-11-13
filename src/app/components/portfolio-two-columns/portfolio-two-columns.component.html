@@ -1,0 +1,12 @@
+<section class="section">
+    <p class="title">{{title}}</p>
+    <div class="portfolio-flex">
+        <ng-container *ngFor="let index of range()">
+            <p class="desc">{{descs[index]}}</p>
+            <div class="row">
+                <img [src]="pics[index*2]" class="small-img" loading="lazy" alt="" srcset="">
+                <img [src]="pics[index*2+1]" class="big-img" loading="lazy" alt="" srcset="">
+            </div>
+        </ng-container>
+    </div>
+</section>

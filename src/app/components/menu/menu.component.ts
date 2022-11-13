@@ -21,6 +21,8 @@ export class MenuComponent implements OnInit {
       let style = `
         background-color: #FFFFFFCC; 
         width: 100%;
+        height: auto;
+        padding: 15px 0;
         backdrop-filter: blur(10px);`;
       this.yourElement!.nativeElement.setAttribute('style', style);
     }

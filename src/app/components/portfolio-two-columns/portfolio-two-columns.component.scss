@@ -1,0 +1,66 @@
+@import "../../../styles.scss";
+
+.section {
+    margin-bottom: 3rem;
+
+    .desc {
+        text-align: center;
+        font-size: 1.1rem;
+        font-style: italic;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: #101010;
+
+        @include md {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        background-color: #FFF;
+
+        @include sm {
+            flex-direction: column;
+        }
+
+        .small-img {
+            width: 40%;
+            height: fit-content;
+            
+            @include sm {
+                width: 100%;
+            }
+        }
+
+        .big-img {
+            width: 60%;
+            height: fit-content;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.title {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-left: 3rem;
+    font-weight: bold;
+
+    @include md {
+        margin-left: 1rem;
+    }
+
+    @include sm {
+        margin-bottom: 1rem;
+    }
+}
