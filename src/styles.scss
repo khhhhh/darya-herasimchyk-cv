@@ -187,15 +187,4 @@ body {
     z-index: -2;
 
     font-family: 'Aeonik-Light';
-
-    &::before {
-        content: "";
-        position: fixed;
-        height: 110%;
-        top: -10%;
-        width: 100%;
-        z-index: -1;
-        // background: radial-gradient(#ffffffff, #ff0000aa);
-        background-color: rgba($color: $color-bg, $alpha: 0.35);
-    }
 }

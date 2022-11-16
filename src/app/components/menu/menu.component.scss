@@ -6,7 +6,6 @@
     position: sticky;
 
     padding: 1em 0;
-    margin: 1em 0;
 
     transition: padding 200ms ease-in-out,
         background-color 200ms ease-in-out;
@@ -36,6 +35,7 @@
             font-weight: bold;
             cursor: pointer;
             text-align: center;
+            user-select: none;
 
             color: $color-primary;
 

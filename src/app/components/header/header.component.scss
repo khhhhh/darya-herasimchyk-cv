@@ -92,8 +92,9 @@
     min-height: 50%;
   }
 
-  a {
+  button {
     font-weight: bold;
     cursor: pointer;
+    user-select: none;
   }
 }
