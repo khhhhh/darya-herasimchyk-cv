@@ -158,6 +158,11 @@
     font-weight: bold;
     display: flex;
 
+      @include sm {
+        font-size: 1.1rem;
+      }
+
+
     &::before {
       content: url('../../../assets/images/star_small.svg');
       position: relative;
