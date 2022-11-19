@@ -13,6 +13,7 @@ import { PortfolioPartComponent } from './components/portfolio-part/portfolio-pa
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PortfolioTwoColumnsComponent } from './components/portfolio-two-columns/portfolio-two-columns.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { NgOptimizedImage } from '@angular/common';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -40,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
