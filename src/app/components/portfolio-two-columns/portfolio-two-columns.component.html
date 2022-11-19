@@ -4,8 +4,8 @@
         <ng-container *ngFor="let index of range()">
             <p class="desc">{{descs[index]}}</p>
             <div class="row">
-                <img [src]="pics[index*2]" class="small-img" loading="lazy" alt="" srcset="">
-                <img [src]="pics[index*2+1]" class="big-img" loading="lazy" alt="" srcset="">
+                <img ngSrc="{{pics[index*2]}}" class="small-img" width="576" height="458" alt="" srcset="">
+                <img ngSrc="{{pics[index*2+1]}}" class="big-img" width="864" height="608" alt="" srcset="">
             </div>
         </ng-container>
     </div>
