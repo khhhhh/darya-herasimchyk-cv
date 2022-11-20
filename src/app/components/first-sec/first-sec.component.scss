@@ -3,12 +3,12 @@
 #anchor-bio-sec {
   display: block;
   position: relative;
-  top: -4rem;
+  top: -4em;
   visibility: hidden;
 }
 
 #bio-sec {
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 
 .bio-wrapper {
@@ -65,7 +65,7 @@
 
     h1 {
 
-      font-size: 4rem;
+      font-size: 4em;
       margin-bottom: 0.3em;
       text-align: left;
 
@@ -74,11 +74,11 @@
       color: $color-primary;
 
       @include md {
-        font-size: 3rem;
+        font-size: 3em;
       }
 
       @include sm {
-        font-size: 2rem;
+        font-size: 2em;
       }
     }
 
@@ -93,12 +93,12 @@
       }
 
       @include md {
-        font-size: 0.9rem;
+        font-size: 0.9em;
         margin-bottom: 1em;
       }
 
       @include xsm {
-        font-size: 0.8rem;
+        font-size: 0.8em;
         margin-bottom: 0em;
       }
     }

@@ -8,7 +8,7 @@
 }
 
 #bio-sec {
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 
 .bio-wrapper {
@@ -17,17 +17,17 @@
   border-radius: 0 57px 0 57px;
   padding: 3em 3em;
   margin-bottom: 5em;
+  height: calc(80vh - 4em);
+  display: flex;
+  flex-direction: column;
 
 
   @include lg {
-    flex-direction: column;
     padding: 3em 3em;
 
   }
 
   @include md {
-    height: fit-content;
-
     border-width: 3px;
     border-radius: 0 60px 0 60px;
   }
@@ -41,69 +41,26 @@
 
   h1 {
     width: 100%;
-    font-size: 4rem;
+    font-size: 4em;
+    padding-top: 0.5em;
     margin-bottom: 0.3em;
     text-align: left;
+    flex: 0 0 auto;
 
     font-family: 'Celaraz';
     line-height: 1;
     color: $color-primary;
 
+    @include lg {
+      padding-top: 0;
+    }
+
     @include md {
-      font-size: 3rem;
+      font-size: 3em;
     }
 
     @include sm {
-      font-size: 2rem;
-    }
-  }
-
-  .about {
-    padding: 0 0 0 3em;
-
-    @include lg {
-      padding: 1em 0 0 0;
-      width: 100%;
-    }
-
-
-    h1 {
-
-      font-size: 4rem;
-      margin-bottom: 0.3em;
-      text-align: left;
-
-      font-family: 'Celaraz';
-      line-height: 1;
-      color: $color-primary;
-
-      @include md {
-        font-size: 3rem;
-      }
-
-      @include sm {
-        font-size: 2rem;
-      }
-    }
-
-    p {
-      text-align: left;
-      color: $color-primary;
-      font-weight: 600;
-
-      @include xl {
-        margin-bottom: 1.5em;
-      }
-
-      @include md {
-        font-size: 0.9rem;
-        margin-bottom: 1em;
-      }
-
-      @include xsm {
-        font-size: 0.8rem;
-        margin-bottom: 0em;
-      }
+      font-size: 2em;
     }
   }
 
@@ -149,17 +106,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 2em;
   margin: 100px 0;
+  flex: 0 1 auto;
+  height: 100%;
+  justify-content: center;
 
   .menu-item {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: bold;
     display: flex;
 
       @include sm {
-        font-size: 1.1rem;
+        font-size: 1.1em;
       }
 
 
@@ -167,7 +127,7 @@
       content: url('../../../assets/images/star_small.svg');
       position: relative;
       height: 100%;
-      width: 1.5rem;
+      width: 1.5em;
       visibility: hidden;
 
       @include sm {

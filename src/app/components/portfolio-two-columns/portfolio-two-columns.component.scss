@@ -1,18 +1,18 @@
 @import "../../../styles.scss";
 
 .section {
-    margin-bottom: 3rem;
+    margin-bottom: 3em;
 
     .desc {
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.1em;
         font-style: italic;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 2em;
+        margin-bottom: 2em;
         color: #101010;
 
         @include md {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.25em;
         }
     }
 
@@ -51,16 +51,16 @@
 .title {
     padding: 0;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     line-height: 1;
-    margin-left: 3rem;
+    margin-left: 3em;
     font-weight: bold;
 
     @include md {
-        margin-left: 1rem;
+        margin-left: 1em;
     }
 
     @include sm {
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
 }

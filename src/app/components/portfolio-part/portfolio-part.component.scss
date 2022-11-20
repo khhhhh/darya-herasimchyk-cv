@@ -6,8 +6,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-top: 2em;
+  margin-bottom: 5em;
 
   @include sm {
     flex-direction: column;
@@ -26,17 +26,17 @@
     .title {
       padding: 0;
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.2em;
       line-height: 1;
-      margin-left: 3rem;
+      margin-left: 3em;
       font-weight: bold;
 
       @include md {
-        margin-left: 1rem;
+        margin-left: 1em;
       }
 
       @include sm {
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
       }
     }
   }
@@ -54,12 +54,12 @@
   }
 
   .empty {
-    height: 1.2rem;
+    height: 1.2em;
     line-height: 1;
   }
 
   .empty-hide {
-    height: 1.2rem;
+    height: 1.2em;
     line-height: 1;
 
     @include sm {
