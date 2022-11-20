@@ -46,10 +46,11 @@
   img {
     width: 500px;
     height: auto;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
 
     @include lg {
       width: 100%;
-      margin: 0 1em;
     }
 
   }

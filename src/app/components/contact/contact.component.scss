@@ -127,8 +127,10 @@
       content: url('../../../assets/images/star_small.svg');
       position: relative;
       height: 100%;
-      width: 1.5em;
-      visibility: hidden;
+      width: 1.5rem;
+      opacity: 0;
+
+      transition: opacity 200ms ease;
 
       @include sm {
         width: 0;
@@ -136,7 +138,7 @@
     }
 
     &:hover::before {
-      visibility: visible;
+      opacity: 1;
     }
   }
 }
