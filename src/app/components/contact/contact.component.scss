@@ -17,7 +17,7 @@
   border-radius: 0 57px 0 57px;
   padding: 3em 3em;
   margin-bottom: 5em;
-  height: calc(80vh - 4em);
+  min-height: calc(80vh - 4em);
   display: flex;
   flex-direction: column;
 
