@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { pictureList } from '../dtos/picObj';
 
 @Component({
   selector: 'app-portfolio-two-columns',
@@ -8,24 +9,28 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PortfolioTwoColumnsComponent implements OnInit {
 
   @Input() title: string;
-  @Input() pics: string[];
+  @Input() pics: pictureList;
   @Input() descs: string[];
   separate: number;
 
   constructor() 
   {
     this.title = '';
-    this.pics = [];
+    this.pics = {};
     this.separate = 0;
     this.descs = [];
    }
 
   ngOnInit(): void {
-    this.separate = this.pics.length / 2;
+    this.separate = this.pics.elements!.length / 2;
   }
 
   range() {
     return [...Array(this.separate).keys()].map(i => i);
   }
+
+  createLink = (num: number): string =>  
+    `https://ik.imagekit.io/me9sfvskr/${this.pics.folderName}/${num}-min.jpg?` + 
+    `ik-sdk-version=javascript-1.4.3&tr=w-${this.pics.elements![num].width}%2Ch-${this.pics.elements![num].height}%2Cfo-auto`;
 
 }

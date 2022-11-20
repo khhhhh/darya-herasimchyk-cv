@@ -4,14 +4,20 @@
             <p class="title">{{title}}</p>
             <p class="empty-hide"></p>
             <ng-container *ngFor="let index of range(columnsLen[0], 0)">
-                <img ngSrc="{{pics[index]}}" width="432" height="611" alt=""> 
+                <img ngSrc="{{createLink(index)}}" 
+                     alt=""
+                     width="{{pics.elements![index].width}}"
+                     height="{{pics.elements![index].height}}"> 
                 <p class="empty"></p>
             </ng-container>
 
         </div>
         <div class="column-mid">
             <ng-container *ngFor="let index of range(columnsLen[1], columnsLen[0])">
-                <img ngSrc="{{pics[index]}}" width="504" height="713" alt=""> 
+                <img ngSrc={{createLink(index)}} 
+                     alt=""
+                     width="{{pics.elements![index].width}}"
+                     height="{{pics.elements![index].height}}"> 
                 <p class="empty"></p>
             </ng-container>
         </div>
@@ -19,7 +25,10 @@
             <p class="empty-hide"></p>
             <p class="empty-hide"></p>
             <ng-container *ngFor="let index of range(columnsLen[2], columnsLen[0]+columnsLen[1])">
-                <img ngSrc="{{pics[index]}}" width="432" height="611" alt="">
+                <img ngSrc="{{createLink(index)}}" 
+                     alt=""
+                     width="{{pics.elements![index].width}}"
+                     height="{{pics.elements![index].height}}"> 
                 <p class="empty"></p>
             </ng-container>
         </div>
