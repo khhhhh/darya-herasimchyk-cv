@@ -31,6 +31,7 @@ export class PortfolioComponent implements OnInit {
     this.createPosters();
     this.createCompositions();
     this.createLogos();
+    this.createFonts();
     this.createTradArt();
   }
 
