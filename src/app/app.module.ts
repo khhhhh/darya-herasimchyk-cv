@@ -14,6 +14,9 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PortfolioTwoColumnsComponent } from './components/portfolio-two-columns/portfolio-two-columns.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NgOptimizedImage } from '@angular/common';
+import { MaterialPopupComponent } from './components/material-popup/material-popup.component';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PortfolioPartComponent,
     PortfolioComponent,
     PortfolioTwoColumnsComponent,
-    ContactComponent
+    ContactComponent,
+    MaterialPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +46,13 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

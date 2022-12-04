@@ -1,10 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { pictureList } from '../dtos/picObj';
+import { MaterialPopupComponent } from '../material-popup/material-popup.component';
 
 @Component({
   selector: 'app-portfolio-part',
   templateUrl: './portfolio-part.component.html',
-  styleUrls: ['./portfolio-part.component.scss']
+  styleUrls: ['./portfolio-part.component.scss'],
+  providers: [MatDialog]
 })
 export class PortfolioPartComponent implements OnInit {
 
@@ -12,8 +15,8 @@ export class PortfolioPartComponent implements OnInit {
   @Input() pics: pictureList;
   separate: number;
   columnsLen: number[];
-
-  constructor() { 
+  
+  constructor(public dialog: MatDialog) { 
     this.title = '';
     this.separate = 0;
     this.pics = {};
@@ -33,6 +36,10 @@ export class PortfolioPartComponent implements OnInit {
       this.columnsLen[2]++;
     }
 
+  }
+
+  openDialog(path: string) : void {
+    this.dialog.open(MaterialPopupComponent);
   }
 
   range(len: number, startPos: number = 0) {

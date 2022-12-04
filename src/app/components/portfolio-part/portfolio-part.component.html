@@ -7,7 +7,8 @@
                 <img ngSrc="{{createLink(index)}}" 
                      alt=""
                      width="{{pics.elements![index].width}}"
-                     height="{{pics.elements![index].height}}"> 
+                     height="{{pics.elements![index].height}}"
+                     (click)="openDialog(createLink(index))"> 
                 <p class="empty"></p>
             </ng-container>
 
@@ -17,7 +18,8 @@
                 <img ngSrc={{createLink(index)}} 
                      alt=""
                      width="{{pics.elements![index].width}}"
-                     height="{{pics.elements![index].height}}"> 
+                     height="{{pics.elements![index].height}}"
+                     (click)="openDialog(createLink(index))"> 
                 <p class="empty"></p>
             </ng-container>
         </div>
@@ -28,7 +30,8 @@
                 <img ngSrc="{{createLink(index)}}" 
                      alt=""
                      width="{{pics.elements![index].width}}"
-                     height="{{pics.elements![index].height}}"> 
+                     height="{{pics.elements![index].height}}"
+                     (click)="openDialog(createLink(index))"> 
                 <p class="empty"></p>
             </ng-container>
         </div>
