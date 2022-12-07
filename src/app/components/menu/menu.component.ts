@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
 
     if (window.innerHeight < window.scrollY) {
       let style = `
-        background-color: #FFFFFFCC; 
+        background-color: var(--clr-trpt); 
         width: 100%;
         height: auto;
         padding: 15px 0;

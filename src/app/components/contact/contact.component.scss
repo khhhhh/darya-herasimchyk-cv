@@ -13,7 +13,7 @@
 
 .bio-wrapper {
   position: relative;
-  border: 4px solid $color-primary;
+  border: 4px solid var(--clr-prim);
   border-radius: 0 57px 0 57px;
   padding: 3em 3em;
   margin-bottom: 5em;
@@ -49,7 +49,7 @@
 
     font-family: 'Celaraz';
     line-height: 1;
-    color: $color-primary;
+    color: var(--clr-prim);
 
     @include lg {
       padding-top: 0;
@@ -69,7 +69,7 @@
     height: $height;
     width: $height * 1.5;
     position: absolute;
-    fill: $color-primary;
+    fill: var(--clr-prim);
     left: 25%;
     top: 0;
     width: 15%;
@@ -83,7 +83,7 @@
   width: $width;
   right: 5%;
   bottom: 5%;
-  fill: $color-primary;
+  fill: var(--clr-prim);
   transform: translateY(calc($width / 3));
 
   translate: all 200ms ease-in-out;
@@ -118,7 +118,7 @@
     font-size: 1.5em;
     font-weight: bold;
     display: flex;
-    color: $color-primary;
+    color: var(--clr-prim);
 
       @include sm {
         font-size: 1.1em;

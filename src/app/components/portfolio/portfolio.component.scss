@@ -11,7 +11,7 @@
 .h1 {
   font-family: 'Celaraz';
   line-height: 1;
-  color: $color-primary;
+  color: var(--clr-prim);
   position: relative;
   font-size: 4em;
   margin-left: 3rem;

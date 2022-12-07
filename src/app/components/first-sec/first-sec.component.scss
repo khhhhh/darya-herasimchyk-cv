@@ -17,7 +17,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 4px solid $color-primary;
+  border: 4px solid var(--clr-prim);
   border-radius: 0 57px 0 57px;
   padding: 3em 3em;
   margin-bottom: 5em;
@@ -72,7 +72,7 @@
 
       font-family: 'Celaraz';
       line-height: 1;
-      color: $color-primary;
+      color: var(--clr-prim);
 
       @include md {
         font-size: 3em;
@@ -85,7 +85,7 @@
 
     p {
       text-align: left;
-      color: $color-primary;
+      color: var(--clr-prim);
       font-weight: 600;
       line-height: 1.25;
 
@@ -110,7 +110,7 @@
     height: $height;
     width: $height * 1.5;
     position: absolute;
-    fill: $color-primary;
+    fill: var(--clr-prim);
     left: 5%;
     bottom: 5%;
     width: 15%;

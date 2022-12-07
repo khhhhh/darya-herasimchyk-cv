@@ -155,6 +155,11 @@ meter {
     --clr-prim: #000;
     --clr-bg: #FFF;
     --clr-scnd: #101010;
+
+    --clr-trpt: #FFFFFFCC;
+
+    --bg-url: url('https://ik.imagekit.io/me9sfvskr/bg/bg.jpg?ik-sdk-version=javascript-1.4.3&tr=w-1200%2Cfo-auto');
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -162,6 +167,9 @@ meter {
         --clr-prim: #FFF;
         --clr-bg: #000;
         --clr-scnd: #FEFEFE;
+
+        --clr-trpt: #000000CC;
+        --bg-url: url('https://ik.imagekit.io/me9sfvskr/bg/bg_black-min.jpg?ik-sdk-version=javascript-1.4.3&tr=w-1200%2Cfo-auto');
     }
 }
 
@@ -170,6 +178,9 @@ meter {
         --clr-prim: #000;
         --clr-bg: #FFF;
         --clr-scnd: #101010;
+
+        --clr-trpt: #FFFFFFCC;
+        --bg-url: 'https://ik.imagekit.io/me9sfvskr/bg/bg.jpg?ik-sdk-version=javascript-1.4.3&tr=w-1200%2Cfo-auto';
     }
 }
 
@@ -238,11 +249,15 @@ html {
 
 body {
     //background-image: url('https://ik.imagekit.io/me9sfvskr/bg/bg.jpg?ik-sdk-version=javascript-1.4.3');
-    background-image: url('https://ik.imagekit.io/me9sfvskr/bg/bg.jpg?ik-sdk-version=javascript-1.4.3&tr=w-1200%2Cfo-auto');
+    background-image: var(--bg-url);
 
     background-repeat: repeat-y;
     background-position: center top;
     background-size: 100% auto;
 
     font-family: 'Aeonik-Light';
+}
+
+.mat-dialog-container {
+    background-color: var(--clr-bg);
 }

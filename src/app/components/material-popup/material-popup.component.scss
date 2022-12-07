@@ -16,5 +16,10 @@
         font-family: 'Aeonik-Light';
         font-size: 1.25em;
         font-weight: bold;
+        color: var(--clr-prim);
+
+        @include xsm {
+            font-size: 0.9em;
+        }
     }
 }

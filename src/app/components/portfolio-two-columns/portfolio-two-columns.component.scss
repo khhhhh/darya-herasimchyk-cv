@@ -9,7 +9,7 @@
         font-style: italic;
         margin-top: 2em;
         margin-bottom: 2em;
-        color: $color-secondary;
+        color: var(--clr-scnd);
 
         @include md {
             margin-bottom: 1.25em;
@@ -55,7 +55,7 @@
     line-height: 1;
     margin-left: 3em;
     font-weight: bold;
-    color: $color-primary;
+    color: var(--clr-prim);
 
     @include md {
         margin-left: 1em;

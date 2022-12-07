@@ -30,7 +30,7 @@
       line-height: 1;
       margin-left: 3em;
       font-weight: bold;
-      color: $color-primary;
+      color: var(--clr-prim);
 
       @include md {
         margin-left: 1em;
