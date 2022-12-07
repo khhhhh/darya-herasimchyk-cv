@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { pictureList } from '../dtos/picObj';
+import { pictureList } from '../../core/helpers/imageHelper';
 
 @Component({
   selector: 'app-portfolio',
@@ -23,11 +23,11 @@ export class PortfolioComponent implements OnInit {
     this.logoDescs = [];
     this.fontsDescs = [];
 
-    this.postersWH = {};
-    this.compositionsWH = {};
-    this.logosWH = {};
-    this.fontsWH = {};
-    this.tradartWH = {};
+    this.postersWH = {elements: [], folderName: ""};
+    this.compositionsWH = {elements: [], folderName: ""};
+    this.logosWH = {elements: [], folderName: ""};
+    this.fontsWH = {elements: [], folderName: ""};
+    this.tradartWH = {elements: [], folderName: ""};
 
     this.createPosters();
     this.createCompositions();

@@ -4,22 +4,22 @@
             <p class="title">{{title}}</p>
             <p class="empty-hide"></p>
             <ng-container *ngFor="let index of range(columnsLen[0], 0)">
-                <img ngSrc="{{createLink(index)}}" 
+                <img ngSrc="{{createLink(pics.elements[index], pics.folderName)}}" 
                      alt=""
                      width="{{pics.elements![index].width}}"
                      height="{{pics.elements![index].height}}"
-                     (click)="openDialog(createLink(index))"> 
+                     (click)="openDialog(pics.elements[index], pics.folderName)"> 
                 <p class="empty"></p>
             </ng-container>
 
         </div>
         <div class="column-mid">
             <ng-container *ngFor="let index of range(columnsLen[1], columnsLen[0])">
-                <img ngSrc={{createLink(index)}} 
+                <img ngSrc="{{createLink(pics.elements[index], pics.folderName)}}"
                      alt=""
                      width="{{pics.elements![index].width}}"
                      height="{{pics.elements![index].height}}"
-                     (click)="openDialog(createLink(index))"> 
+                     (click)="openDialog(pics.elements[index], pics.folderName)"> 
                 <p class="empty"></p>
             </ng-container>
         </div>
@@ -27,11 +27,11 @@
             <p class="empty-hide"></p>
             <p class="empty-hide"></p>
             <ng-container *ngFor="let index of range(columnsLen[2], columnsLen[0]+columnsLen[1])">
-                <img ngSrc="{{createLink(index)}}" 
+                <img ngSrc="{{createLink(pics.elements[index], pics.folderName)}}" 
                      alt=""
                      width="{{pics.elements![index].width}}"
                      height="{{pics.elements![index].height}}"
-                     (click)="openDialog(createLink(index))"> 
+                     (click)="openDialog(pics.elements[index], pics.folderName)"> 
                 <p class="empty"></p>
             </ng-container>
         </div>

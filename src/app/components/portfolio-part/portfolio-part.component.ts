@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { pictureList } from '../dtos/picObj';
+import { pictureList, createLink, picture } from '../../core/helpers/imageHelper';
 import { MaterialPopupComponent } from '../material-popup/material-popup.component';
 
 @Component({
@@ -15,11 +15,12 @@ export class PortfolioPartComponent implements OnInit {
   @Input() pics: pictureList;
   separate: number;
   columnsLen: number[];
+  createLink = createLink;
   
   constructor(public dialog: MatDialog) { 
     this.title = '';
     this.separate = 0;
-    this.pics = {};
+    this.pics = {elements: [], folderName: ""};
     this.columnsLen = [0, 0, 0];
   }
 
@@ -38,15 +39,11 @@ export class PortfolioPartComponent implements OnInit {
 
   }
 
-  openDialog(path: string) : void {
-    this.dialog.open(MaterialPopupComponent);
+  openDialog(path: picture, folderName: string) : void {
+    this.dialog.open(MaterialPopupComponent, {data: {pic: path, folderName: folderName}});
   }
 
   range(len: number, startPos: number = 0) {
     return [...Array(len).keys()].map(i => i + startPos);
   }
-
-  createLink = (num: number): string =>  
-    `https://ik.imagekit.io/me9sfvskr/${this.pics.folderName}/${num}-min.jpg?` + 
-    `ik-sdk-version=javascript-1.4.3&tr=w-${this.pics.elements![num].width}%2Ch-${this.pics.elements![num].height}%2Cfo-auto`;
 }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { pictureList } from '../dtos/picObj';
+import { pictureList, createLink } from '../../core/helpers/imageHelper';
 
 @Component({
   selector: 'app-portfolio-two-columns',
@@ -16,7 +16,7 @@ export class PortfolioTwoColumnsComponent implements OnInit {
   constructor() 
   {
     this.title = '';
-    this.pics = {};
+    this.pics = {elements: [], folderName: ""};
     this.separate = 0;
     this.descs = [];
    }
