@@ -157,7 +157,6 @@ meter {
     --clr-scnd: #101010;
 
     --clr-trpt: #FFFFFFCC;
-
     --bg-url: url('https://ik.imagekit.io/me9sfvskr/bg/bg.jpg?ik-sdk-version=javascript-1.4.3&tr=w-1200%2Cfo-auto');
 
 }
@@ -180,7 +179,7 @@ meter {
         --clr-scnd: #101010;
 
         --clr-trpt: #FFFFFFCC;
-        --bg-url: 'https://ik.imagekit.io/me9sfvskr/bg/bg.jpg?ik-sdk-version=javascript-1.4.3&tr=w-1200%2Cfo-auto';
+        --bg-url: url('https://ik.imagekit.io/me9sfvskr/bg/bg.jpg?ik-sdk-version=javascript-1.4.3&tr=w-1200%2Cfo-auto');
     }
 }
 
