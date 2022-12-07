@@ -118,6 +118,7 @@
     font-size: 1.5em;
     font-weight: bold;
     display: flex;
+    color: $color-primary;
 
       @include sm {
         font-size: 1.1em;

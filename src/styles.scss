@@ -151,9 +151,32 @@ meter {
     font-style: normal;
 }
 
+:root {
+    --clr-prim: #000;
+    --clr-bg: #FFF;
+    --clr-scnd: #101010;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-prim: #FFF;
+        --clr-bg: #000;
+        --clr-scnd: #FEFEFE;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --clr-prim: #000;
+        --clr-bg: #FFF;
+        --clr-scnd: #101010;
+    }
+}
+
 // variables //
-$color-primary: #000;
-$color-bg: #FFF;
+$color-primary: var(--clr-prim);
+$color-bg: var(--clr-bg);
+$color-secondary: var(--clr-scnd);
 
 // Small tablets (portrait view)
 $screen-xsm-min: 399.98px;
