@@ -1,7 +1,7 @@
 @import "../../../styles.scss";
 
 .header {
-    margin: 5px 0;
+    margin: 7px 0;
     display: flex;
     justify-content: flex-end;
 
@@ -22,5 +22,10 @@
         fill: var(--clr-prim);
         width: 12px;
         height: 12px;
+    }
+
+    .closeLink {
+        display: flex;
+        align-content: center;
     }
 }
