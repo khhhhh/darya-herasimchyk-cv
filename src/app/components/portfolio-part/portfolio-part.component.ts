@@ -40,7 +40,7 @@ export class PortfolioPartComponent implements OnInit {
   }
 
   openDialog(path: picture, folderName: string) : void {
-    this.dialog.open(MaterialPopupComponent, {data: {pic: path, folderName: folderName, }});
+    this.dialog.open(MaterialPopupComponent, {panelClass: 'material-popup', data: {pic: path, folderName: folderName, }});
   }
 
   range(len: number, startPos: number = 0) {
