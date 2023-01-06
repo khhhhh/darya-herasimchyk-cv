@@ -12,7 +12,9 @@ export class AppComponent {
 
   constructor(translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('en');
-    translate.addLangs(['ru']);
+    translate.addLangs(['en' ,'ru', 'pl', ]);
+    translate.setDefaultLang(
+      translate.getBrowserLang() ?? 'en'
+    );
   }
 }
