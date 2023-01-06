@@ -4,7 +4,7 @@
         <img class="photo" ngSrc="assets/images/face2.jpg" width="1272" height="1272" alt="">
         <div class="about">
             <h1>{{ 'about' | translate}}</h1>
-            <p>{{'bio-text' | translate}} </p>
+            <p [innerHTML]="'bio-text' | translate"></p>
         </div>
         <svg class="diamond" viewBox="48.88 2.27 203.22 295.46">
             <path d="M148.95,2.27c0,0,2.62,135.57-100.07,147.73c0,0,91.31,1.63,100.07,142.93c0,0,0.96-135.34,103.15-142.93  c-16.57-1.54-29.16-6.31-38.23-11.1C149.02,104.67,148.87,8.75,148.95,2.27z"/>

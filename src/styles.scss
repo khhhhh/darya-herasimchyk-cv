@@ -88,8 +88,10 @@ meter {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
     overflow-wrap: break-word;
+    line-break: after-white-space;
     -webkit-line-break: after-white-space;
     -webkit-user-select: auto;
+    user-select: auto;
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
@@ -127,6 +129,13 @@ meter {
 @font-face {
     font-family: 'Aeonik-light';
     src: url('assets/fonts/Aeonik/AeonikProTRIAL-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century-gothic';
+    src: url('assets/fonts/century-gothic/Century Gothic.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }

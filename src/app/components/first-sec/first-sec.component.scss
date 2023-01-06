@@ -89,6 +89,10 @@
       font-weight: 600;
       line-height: 1.25;
 
+      & span {
+        font-family: 'Century-gothic' !important;
+      }
+
       @include xl {
         margin-bottom: 1.5em;
       }
@@ -116,9 +120,10 @@
     width: 15%;
     transform: translateY(calc($height / 2 + 1px)) scaleX(-1);
 
-    @include lg{
+    @include lg {
       bottom: 0;
       left: 8%;
     }
   }
+
 }
